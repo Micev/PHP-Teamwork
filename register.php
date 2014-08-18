@@ -15,7 +15,6 @@ if($_POST){
 }
 if($password==$confpass && $mail==$mailconf){
 $password = crypt(md5(sha1($password)),sha1($username));
-echo($password);
     $check=mysqli_query($con,'SELECT * FROM `users` WHERE `User_Name` = "'.$username.'"');
     $x=mysqli_num_rows($check);
     if($x>0){
@@ -25,4 +24,3 @@ echo($password);
         mysqli_query($con,'INSERT INTO `user_details`(`User_FirstName`, `User_LastName`, `User_E-mail`, `User_Gender`)
         VALUES ("'.$firstname.'","'.$lastname.'","'.$mail.'","'.$gender.'")');
     }}
-var_dump($_POST);
