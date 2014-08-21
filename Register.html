@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style/registerAndLog.css">
 </head>
 <body>
-<form method="post" action="register.php">
-    <input type="text" name="username" placeholder="UserName">
-    <input type="password" name="password" placeholder="Password">
-    <input type="password" name="passwordConf" placeholder="Confirm Password">
-    <input type="text" name="email" placeholder="E-mail">
-    <input type="text" name="emailConf" placeholder="Confirm E-mail">
-    <input type="text" name="firstname" placeholder="First Name">
-    <input type="text" name="lastname" placeholder="Last Name">
-    Male<input type="radio" name="gender" value="male">
-    Female<input type="radio" name="gender" value="female">
-    <input type="reset" value="Clear">
-    <input type="submit" value="Register">
-</form>
+<header>
+    <img src="images/logo.png">
+</header>
+<div id="wrapper">
+    <form method="post" action="register.php" id="reg">
+        <input type="text" name="username" placeholder="UserName">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="passwordConf" placeholder="Confirm Password">
+        <input type="text" name="email" placeholder="E-mail">
+        <input type="text" name="emailConf" placeholder="Confirm E-mail">
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="text" name="lastname" placeholder="Last Name">
+        <div>
+        <div class="gender"><label for="male">Male</label><input type="radio" name="gender" value="male" id="male"></div>
+        <div class="gender"><label for="female">Female</label><input type="radio" name="gender" value="female" id="female"></div>
+        </div>
+        <input type="reset" value="Clear">
+        <input type="submit" value="Register">
+    </form>
+</div>
+<footer>
+    <div> &copy; Copyright by team Draco</div>
+</footer>
 </body>
 </html>

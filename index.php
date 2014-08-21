@@ -7,8 +7,3 @@ else{
     echo 'Hello Guest. Please <a href="login.html">Login</a> or <a href="Register.html">Register</a>.';
 }
 ?>
-<form method="post" action="message.php">
-    <input type="text" name="title">
-    <textarea name="msg"></textarea>
-    <input type="submit" value="Post">
-</form>
