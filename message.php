@@ -9,3 +9,9 @@ if($_POST){
     mysqli_query($con,'INSERT INTO `message`(`message_Title`, `message_Text`, `message_User`, `message_Data`)
     VALUES ("'.$title.'","'.$msg.'","'.$user.'","'.date('y,m,d').'")');
 }
+$all=mysqli_query($con,'SELECT `message_ID`, `message_Title`, `message_Text`, `message_User`, `message_Data` FROM `message`');
+while($row = mysqli_fetch_array($all))
+{
+    echo $row['message_Title'] . " " . $row['message_Text']. " " . $row['message_User']. " " . $row['message_Data'];
+    echo "<br />";
+}
