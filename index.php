@@ -1,4 +1,9 @@
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="style/style.css">
 <?php
+$con=mysqli_connect("localhost","root","","teamwork");
+header("Content-Type: text/html; charset=utf-8");
+$con->character_set_name();
 //session_start();
 //if($_SESSION['isLogged']){
 //    echo 'Hello '.$_SESSION['user'].' you are logged in.'.'<a href="logout.php">Logout</a>';
@@ -6,6 +11,41 @@
 //else{
 //    echo 'Hello Guest. Please <a href="login.html">Login</a> or <a href="Register.html">Register</a>.';
 //}
+if (!$con->set_charset("utf8")) {
+   // printf("Error loading character set utf8: %s\n", $con->error);
+} else {
+ //   printf("Current character set: %s\n", $con->character_set_name());
+}
+$sections=mysqli_query($con,'SELECT * FROM `section`');
+while($row = mysqli_fetch_assoc($sections))
+{?>
+
+<section>
+    <div class="mainTitle"><?=$row['section_name']?></div>
+    <div >
+        <div class="title">Форум</div>
+        <div class="theme">Теми</div>
+        <div class="answer">Отговори</div>
+        <div class="lastAnswer">Последен отговор</div>
+    </div>
+    <?php
+    $topics=mysqli_query($con,'SELECT * FROM `topic` WHERE `section_ID` = "'.$row['section_ID'].'"');
+    while($row = mysqli_fetch_assoc($topics))
+    { $themes=mysqli_query($con,'SELECT * FROM `theme` WHERE `topic_ID` = "'.$row['topic_ID'].'"');
+    ?>
+    <article>
+        <div class="title"><a href="topic.php?topic=<?=$row['topic_ID']?>"><?=$row['topic_name']?></a></div>
+        <div class="theme"><?=mysqli_num_rows($themes)?></div>
+        <div class="answer">1245</div>
+        <div class="lastAnswer"><div>22-08-2014, 15:59</div>
+            Тема:  Last PostIT Село
+            Последно: eXiLe</div>
+        <div class="info"><?=$row['topic_info']?></div>
+    </article>
+<?php } ?>
+</section>
+<?php
+}die();
 ?>
 <DOCTYPE html>
 <html>
