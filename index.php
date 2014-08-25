@@ -1,14 +1,11 @@
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="style/style.css">
 <?php
-$con=mysqli_connect("localhost","root","","teamwork");
+require("header.php");
 header("Content-Type: text/html; charset=utf-8");
 $con->character_set_name();
 if (!$con->set_charset("utf8")) {
     printf("Error loading character set utf8: %s\n", $con->error);
 }
 $sections=mysqli_query($con,'SELECT * FROM `section`');
-require("header.php");
 while($row = mysqli_fetch_assoc($sections))
 {?>
 <section>
