@@ -12,7 +12,7 @@ if($_POST){
     $firstname=htmlspecialchars(trim($_POST['firstname']));
     $lastname=htmlspecialchars(trim($_POST['lastname']));
     $gender=htmlspecialchars(trim($_POST['gender']));
-}
+
 if($password==$confpass && $mail==$mailconf){
 $password = crypt(md5(sha1($password)),sha1($username));
     $check=mysqli_query($con,'SELECT * FROM `users` WHERE `User_Name` = "'.$username.'"');
@@ -25,3 +25,4 @@ $password = crypt(md5(sha1($password)),sha1($username));
         VALUES ("'.$firstname.'","'.$lastname.'","'.$mail.'","'.$gender.'")');
         header("Location: login.php");
     }}
+}

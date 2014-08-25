@@ -1,5 +1,5 @@
 <?php header("Content-Type: text/html; charset=utf-8");
-var_dump($_GET);?>
+?>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="style/style.css">
 <?php
@@ -26,14 +26,15 @@ while($row = mysqli_fetch_assoc($topic))
         $topics=mysqli_query($con,'SELECT * FROM `theme` WHERE `topic_ID` = "'.$row['topic_ID'].'"');
         while($row = mysqli_fetch_assoc($topics))
         {$themes=mysqli_query($con,'SELECT * FROM `message` WHERE `theme_ID` = "'.$row['theme_ID'].'"');
+            $last=mysqli_query($con,'SELECT * FROM `message` WHERE `theme_ID` = "'.$row['theme_ID'].'"ORDER BY `message_ID` DESC LIMIT 1');
+            $last=mysqli_fetch_assoc($last);
             ?>
 
             <article>
                 <div class="title"><a href="message.php?theme=<?=$row['theme_ID']?>"><?=$row['theme_name']?></a></div>
                 <div class="answer"><?=mysqli_num_rows($themes);?></div>
-                <div class="lastAnswer"><div>123</div>
-                    Тема:  Last PostIT Село
-                    Последно: eXiLe</div>
+                <div class="lastAnswer"><div><?=$last['message_User']?></div>
+<?=$last['message_Data']?></div>
                 <div class="info"><?=$row['theme_info']?></div>
             </article>
         <?php } ?>
