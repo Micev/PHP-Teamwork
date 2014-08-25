@@ -23,4 +23,5 @@ $password = crypt(md5(sha1($password)),sha1($username));
         mysqli_query($con,'INSERT INTO `users`( `User_Name`, `User_Password`) VALUES ("'.$username.'","'.$password.'")');
         mysqli_query($con,'INSERT INTO `user_details`(`User_FirstName`, `User_LastName`, `User_E-mail`, `User_Gender`)
         VALUES ("'.$firstname.'","'.$lastname.'","'.$mail.'","'.$gender.'")');
+        header('Location: login.php');
     }}

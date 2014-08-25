@@ -4,21 +4,22 @@
 }
 body{
     background-image: url("../images/bg.gif");
-    color: white;
 }
 #wrapper{
     padding: 10px;
     margin: 0 auto;
     width: 90%;
-
 }
 header{
     height: 100px;
 }
 section{
+    color: white;
     background-color: #2d3e3f;
-    margin: 20px 0px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     padding: 10px;
+    width: 90%;
 }
 article{
     padding: 5px;
@@ -64,4 +65,14 @@ div.forum, div.theme, div.answer {
 div.info{
     font-size: 14px;
     display: inline-block;
+}
+.xdebug-var-dump{
+    display: none;
+}
+#menu{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+footer {
+    text-align: center;
 }

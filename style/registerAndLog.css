@@ -8,7 +8,7 @@ body{
     height: 600px;
 }
 header{
-    height: 150px;
+    height: 115px;
 }
 #wrapper{
 height: 450px;
@@ -60,7 +60,4 @@ input[type="submit"], input[type="reset"]{
 }
 footer {
     text-align: center;
-}
-footer div {
-    vertical-align: bottom;
 }
