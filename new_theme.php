@@ -16,24 +16,5 @@ if(isset($_POST['submit'])){
     <input type="submit" name="submit" onclick="" >
 </form>
 <?php
-<<<<<<< .mine
 require("footer.php");
 ?>
-
-
-
-
-
-
-
-=======
-include('header.php');
-if($_POST){
-$theme=$_POST['theme'];
-$info=$_POST['info'];
-$titleID=$_GET['topic'];
-$title=$_POST['title'];
-$msg=$_POST['message'];
-mysqli_query($con,'INSERT INTO `theme`(`theme_name`, `theme_info`, `topic_ID`) VALUES ("'.$theme.'","'.$info.'","'.$titleID.'")');
-}
->>>>>>> .theirs

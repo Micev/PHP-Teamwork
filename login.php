@@ -23,7 +23,6 @@ if($_POST){
          $error .= '<p class="error">Incorrect Username or Password</p>';
     }
 }
-<<<<<<< .mine
 ?>
 <?=$error?>
 <div id="form_wrapper">
@@ -36,19 +35,3 @@ if($_POST){
 <?php
 require("footer.php");
 ?>
-
-=======
-$password = crypt(md5(sha1($password)),sha1($username));
-$check=mysqli_query($con,'SELECT * FROM `users` WHERE `User_Name` = "'.$username.'" and `User_Password` = "'.$password.'"');
-$x=mysqli_num_rows($check);
-if($x>0){
-    session_start();
-    echo 'Logged!';
-    $_SESSION['isLogged']=true;
-    $_SESSION['user']=$username;
-    header("Location: index.php");
-}
-else{
-    echo 'Incorrect Login details';
-}
->>>>>>> .theirs
