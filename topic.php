@@ -14,7 +14,8 @@ if (!$con->set_charset("utf8")) {
 $topic=mysqli_query($con,'SELECT * FROM `topic` WHERE `topic_ID`= "'.$topicID.'"');
 while($row = mysqli_fetch_assoc($topic))
 {?>
-<a href="new_theme.php?topic=<?=$topicID?>">New Theme</a>
+<div class="btnNewTheme"><input type="button" value="New Theme" onclick=location.href="new_theme.php?topic=<?=$topicID?>"></div>
+<!--<a href="new_theme.php?topic=--><?//=$topicID?><!--">New Theme</a>-->
     <section>
         <div class="mainTitle"><?=$row['topic_name']?></div>
         <div >
