@@ -10,9 +10,6 @@ body{
     margin: 0 auto;
     width: 90%;
 }
-header{
-    height: 100px;
-}
 section{
     color: white;
     background-color: #2d3e3f;
@@ -35,7 +32,7 @@ div.mainTitle{
 
 div.title{
     font-size: 18px;
-    width: 70%;
+    width: 67%;
     display: inline-block;
     vertical-align: top;
 }
@@ -49,13 +46,13 @@ div.theme{
     text-align: center;
 }
 div.answer{
-    width: 7%;
+    width: 9%;
     display: inline-block;
     text-align: center;
 }
 div.lastAnswer{
     font-size: 14px;
-    width: 14%;
+    width: 15%;
     display: inline-block;
     text-align: center;
 }
@@ -75,4 +72,57 @@ div.info{
 }
 footer {
     text-align: center;
+}
+.btnNewTheme {
+    text-align: right;
+}
+.btnNewTheme input{
+    background-color:  #2d3e3f;
+    color: #e96a0d;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+    margin: 20px 50px 20px 20px;
+    padding: 10px;
+    outline:0;
+
+}
+.btnNewTheme input:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.answerForm{
+    width: 500px;
+}
+.answerForm label{
+    width: 130px;
+}
+.answerForm input#theme, input#themeInfo, input#themeMessage, textarea{
+    display: block;
+    width: 400px;
+}
+.answerForm textarea{
+    clear:left;
+    min-width: 400px;
+    min-height:150px;
+    max-width: 400px;
+    max-height:150px;
+    margin-bottom: 20px;
+}
+p.error {
+    background: #ffd;
+    color: red;
+}
+p.error:before {
+    content: "Error: ";
+}
+p.success {
+    background: #ffd;
+    color: green;
+}
+p.success:before {
+    content: "Success: ";
+}
+p.error, p.success {
+    font-weight: bold;
 }

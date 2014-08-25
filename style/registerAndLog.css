@@ -3,15 +3,14 @@
     padding: 0px;
 }
 body{
-    background-image:url("../images/bg.gif");
+    background-image:url("../images/bg.gif") ;
     background-repeat: repeat ;
-    height: 600px;
 }
 header{
-    height: 115px;
+    height: 175px;
 }
-#wrapper{
-height: 450px;
+#form_wrapper{
+
 }
 form#reg{
     margin: auto auto;
@@ -54,10 +53,11 @@ input[type="submit"], input[type="reset"]{
     background-color: #E96A0D ;
     font-size: 30px;
     color: #2D3E3F;
-    width: 49%;
+    width: 125px;
     height: 40px;
     border: 0;
 }
 footer {
     text-align: center;
+    margin-top: 10px;
 }
