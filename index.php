@@ -33,7 +33,7 @@ while($row = mysqli_fetch_assoc($sections))
             Последно: eXidLe</div>
         <div class="info"><?=$row['topic_info']?></div>
     </article>
-<?php } ?>
+<?php } ?> 
 </section>
 <?php
 }require("footer.php");

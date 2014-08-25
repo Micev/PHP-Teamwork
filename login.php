@@ -16,7 +16,7 @@ if($x>0){
     echo 'Logged!';
     $_SESSION['isLogged']=true;
     $_SESSION['user']=$username;
-    header('Location: header.php');
+    header("Location: header.php");
 }
 else{
     echo 'Incorrect Login details';
