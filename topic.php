@@ -10,10 +10,11 @@ if (!$con->set_charset("utf8")) {
 } else {
     //   printf("Current character set: %s\n", $con->character_set_name());
 }
+
 $topic=mysqli_query($con,'SELECT * FROM `topic` WHERE `topic_ID`= "'.$topicID.'"');
 while($row = mysqli_fetch_assoc($topic))
 {?>
-
+<a href="new_theme.php?topic=<?=$topicID?>">New Theme</a>
     <section>
         <div class="mainTitle"><?=$row['topic_name']?></div>
         <div >
@@ -30,7 +31,7 @@ while($row = mysqli_fetch_assoc($topic))
             <article>
                 <div class="title"><a href="message.php?theme=<?=$row['theme_ID']?>"><?=$row['theme_name']?></a></div>
                 <div class="answer"><?=mysqli_num_rows($themes);?></div>
-                <div class="lastAnswer"><div>22-08-2014, 15:59</div>
+                <div class="lastAnswer"><div>123</div>
                     Тема:  Last PostIT Село
                     Последно: eXiLe</div>
                 <div class="info"><?=$row['theme_info']?></div>
