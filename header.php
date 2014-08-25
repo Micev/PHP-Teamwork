@@ -10,8 +10,8 @@
 <div id="menu">
    <?php
    session_start();
-   $log= $_SESSION['isLogged'];
-   if($log){
+   $con=mysqli_connect("localhost","root","","teamwork");
+   if($_SESSION['isLogged']){
        echo 'Hello '.$_SESSION['user'].' you are logged in.'.'<a href="logout.php">Logout</a>';
    }
    else{

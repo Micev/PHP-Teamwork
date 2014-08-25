@@ -1,3 +1,4 @@
+<a href="new_answer.php">New Answer</a>
 <?php
 session_start();
 $theme=$_GET['theme'];
