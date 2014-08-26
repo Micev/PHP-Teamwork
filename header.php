@@ -14,7 +14,7 @@
         <div id="menu2">
            <?php
            session_start();
-           setcookie('','',3600);
+           setcookie('','',30);
            $con=mysqli_connect("localhost","root","","teamwork");
            //v1
            /*if(isset($_SESSION['isLogged'])){
@@ -26,10 +26,7 @@
            ?>
            
            <!--v2-->
-            <a class="item" href="index.php">Index</a>
-            <a class="item" href="#">Create a topic</a>
-            <a class="item" href="#">Create a category</a>
-            <div id="userbar">
+           <div id="userbar">
              <?php
                 if(isset($_SESSION['isLogged']))
                 echo '<span style="color: #F56505">Hello,'.htmlentities($_SESSION['user']) .' </span> <a class="item" href="logout.php">Logout</a>';
@@ -37,8 +34,15 @@
                  echo '<a class="item" href="login.php">Login</a> <a class="item" href="register.php">Register</a>';
                 }
               ?>  
+              </div>
+            <div id="rightmenu">
+            <a class="item" href="https://softuni.bg" target="_blank">SoftUni</a>
+            <a class="item" href="index.php">Index</a>
+            <a class="item" href="#">Search</a>
+            <a class="item" href="#">FAQ</a>
+            </div>
               <!--end v2-->
             </div>
-           </div>
+           
         
     </header>
