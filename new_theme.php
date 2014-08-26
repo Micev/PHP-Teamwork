@@ -1,10 +1,17 @@
 <?php
 require("header.php");
 if(isset($_POST['submit'])){
+    $topic=$_GET['topic'];
     $theme=$_POST['theme'];
     $info=$_POST['info'];
     $title=$_POST['title'];
     $msg=$_POST['message'];
+    $user=$_SESSION['user'];
+    $date= date('d-M-Y H:m:s');
+    mysqli_query($con,'INSERT INTO `theme`(`theme_name`, `theme_info`, `topic_ID`)
+                        VALUES ("'.$theme.'","'.$info.'","'.$topic.'")');
+    mysqli_query($con,'INSERT INTO `message`(`message_Title`, `message_Text`, `message_User`, `message_Data`, `theme_ID`) VALUES ("'.$title.'","'.$msg.'","'.$user.'","'.$date.'", LAST_INSERT_ID())');
+    header('Location:topic.php?topic='.$topic);
 }
 ?>
 <form method="post" class="answerForm">
