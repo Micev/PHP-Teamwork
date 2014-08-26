@@ -36,10 +36,10 @@
               ?>  
               </div>
             <div id="rightmenu">
-            <a class="item" href="https://softuni.bg" target="_blank">SoftUni</a>
-            <a class="item" href="index.php">Index</a>
+            <a class="item" href="index.php">Home</a>
             <a class="item" href="#">Search</a>
             <a class="item" href="#">FAQ</a>
+            <a class="item" href="https://softuni.bg" target="_blank">SoftUni</a>
             </div>
               <!--end v2-->
             </div>
