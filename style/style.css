@@ -92,6 +92,7 @@ footer {
     cursor: pointer;
 }
 .themeForm{
+    margin: 50px;
     width: 500px;
 }
 .themeForm label{

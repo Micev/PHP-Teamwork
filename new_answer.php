@@ -7,7 +7,7 @@ if(!isset($_SESSION['isLogged'])){
 
 <form method="post" class="answerForm">
     <input type="text" name="title" placeholder="Enter tag name...">
-    <textarea name="text" placeholder="Enter your answer here..."></textarea>
+    <textarea name="text" placeholder="Enter your answer here..." maxlength="2000"></textarea>
     <input type="submit">
 </form>
 <?php
