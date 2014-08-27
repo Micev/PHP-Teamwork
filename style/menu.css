@@ -1,0 +1,49 @@
+/*v2*/
+
+header{
+    height: 220px;
+}
+
+#menu2 {
+    float: left;
+    clear: both;               
+    width:90%;
+    height:45px;
+    padding-left:20px ;
+    padding-top:20px;
+    background-color: #2D3E3F;
+    text-align: left;
+    margin:0 auto;
+    
+}
+ 
+#menu2 a:hover {
+    background-color: #7B8385;
+    color: #F56505;
+    
+}
+ 
+#userbar {
+    float: right;
+    width: 200px;
+}
+ 
+ span{
+ 	color:#F56505;
+    font-family: Arial;
+     font-size: 20px;
+ }
+ 
+ .item {
+	background-color: #F56505;
+    color: #2D3E3F;
+    font-family: Arial;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+
+
+/*end v2*/
