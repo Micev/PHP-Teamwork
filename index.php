@@ -11,10 +11,10 @@ while($row = mysqli_fetch_assoc($sections))
         <section>
             <div class="mainTitle"><?=$row['section_name']?></div>
             <div >
-                <div class="title">Форум</div>
-                <div class="theme">Теми</div>
-                <div class="answer">Отговори</div>
-                <div class="lastAnswer">Последен отговор</div>
+                <div class="title">Forum</div>
+                <div class="theme">Theme</div>
+                <div class="answer">Answer</div>
+                <div class="lastAnswer">Last answer</div>
             </div>
         <?php
         $topics=mysqli_query($con,'SELECT * FROM `topic` WHERE `section_ID` = "'.$row['section_ID'].'"');
@@ -28,9 +28,11 @@ while($row = mysqli_fetch_assoc($sections))
                     <div class="title"><a href="topic.php?topic=<?=$row['topic_ID']?>"><?=$row['topic_name']?></a></div>
                     <div class="theme"><?=mysqli_num_rows($themes)?></div>
                     <div class="answer"><?=mysqli_num_rows($asdf)?></div>
-                    <div class="lastAnswer"><div><?=$ss['message_Data']?></div>
-                        Тема:  <?=$ss['theme_name']?>
-                        Последно: <?=$ss['message_User']?></div>
+                    <div class="lastAnswer">
+                        <div>Date: <?=$ss['message_Data']?></div>
+                        <p>Theme:  <?=$ss['theme_name']?></p>
+                        <p>Last: <?=$ss['message_User']?></p>
+                    </div>
                     <div class="info"><?=$row['topic_info']?></div>
                 </article>
 <?php       }

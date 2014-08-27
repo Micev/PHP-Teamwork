@@ -32,6 +32,7 @@ if($_POST){
         <input type="submit" value="Login">
     </form>
 </div>
+Not a User? <a href="register.php">Please Register</a>
 <?php
 require("footer.php");
 ?>

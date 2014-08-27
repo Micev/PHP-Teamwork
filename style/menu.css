@@ -1,49 +1,69 @@
 /*v2*/
 
 header{
-    height: 220px;
+    height: 200px;
 }
 
 #menu2 {
-    float: left;
-    clear: both;               
-    width:90%;
-    height:45px;
-    padding-left:20px ;
-    padding-top:20px;
+
+    width:91.5%;
+    height:50px;
     background-color: #2D3E3F;
     text-align: left;
+    content:"";
+
+    clear:both;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     margin:0 auto;
-    
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+
 }
- 
+
 #menu2 a:hover {
     background-color: #7B8385;
     color: #F56505;
-    
+
 }
- 
+
 #userbar {
-    float: right;
-    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:center;
+    margin-left: 20px;
+
 }
- 
- span{
- 	color:#F56505;
+#rightmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items:center;
+    margin-right: 20px;
+}
+
+span{
+    color:#F56505;
     font-family: Arial;
-     font-size: 20px;
- }
- 
- .item {
-	background-color: #F56505;
+    font-size: 20px;
+}
+
+.item {
+    background-color: #F56505;
     color: #2D3E3F;
     font-family: Arial;
-    padding: 3px;
+    padding: 3px 6px;
     text-decoration: none;
     font-size: 20px;
-    margin-right: 10px;
-    
+    margin-right: 12px;
+    margin-left:12px;
+    border-radius: 7px;
 }
+
+
+
 
 
 /*end v2*/

@@ -1,5 +1,8 @@
 <?php
 require("header.php");
+if(!isset($_SESSION['isLogged'])){
+    header('Location: login.php');
+}
 if(isset($_POST['submit'])){
     $topic=$_GET['topic'];
     $theme=$_POST['theme'];
@@ -14,7 +17,7 @@ if(isset($_POST['submit'])){
     header('Location:topic.php?topic='.$topic);
 }
 ?>
-<form method="post" class="answerForm">
+<form method="post" class="themeForm">
     <label for="theme">Theme:</label><input type="text" name="theme" id="theme" required="">
     <label for="themeInfo">Theme info:</label><input type="text" name="info" id="themeInfo" required="">
     <label for="themeMessage">Message title:</label><input type="text" name="title" id="themeMessage" required="">

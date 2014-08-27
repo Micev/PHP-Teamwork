@@ -91,15 +91,26 @@ footer {
     opacity: 0.8;
     cursor: pointer;
 }
-.answerForm{
+.themeForm{
     width: 500px;
 }
-.answerForm label{
+.themeForm label{
     width: 130px;
 }
-.answerForm input#theme, input#themeInfo, input#themeMessage, textarea{
+.themeForm input#theme, input#themeInfo, input#themeMessage, textarea{
     display: block;
     width: 400px;
+}
+.themeForm textarea{
+    clear:left;
+    min-width: 400px;
+    min-height:150px;
+    max-width: 400px;
+    max-height:150px;
+    margin-bottom: 20px;
+}
+.answerForm{
+    margin: 50px;
 }
 .answerForm textarea{
     clear:left;
@@ -125,4 +136,31 @@ p.success:before {
 }
 p.error, p.success {
     font-weight: bold;
+}
+.tableAnswer{
+    width: 91%;
+    margin: 0 auto;
+    background-color: #2d3e3f;
+    color: white;
+    padding: 10px;
+    border-collapse: collapse;
+}
+.tableAnswer  td a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.tableAnswer  td span.details{
+    color:white;
+}
+
+.tableAnswer tbody tr td{
+    padding: 10px;
+    border-bottom: 10px solid white;
+    text-align: left;
+    border-right:1px solid white ;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+.tableAnswer tbody tr:nth-child(1){
+    text-overflow: ellipsis;
 }

@@ -1,19 +1,22 @@
 
 <?php
-include('header.php');?>
+include('header.php');
+if(!isset($_SESSION['isLogged'])){
+    header('Location: login.php');
+}?>
 
-<form method="post">
-    <input type="text" name="title">
-    <textarea name="text"></textarea>
+<form method="post" class="answerForm">
+    <input type="text" name="title" placeholder="Enter tag name...">
+    <textarea name="text" placeholder="Enter your answer here..."></textarea>
     <input type="submit">
 </form>
 <?php
-if(isset($_POST)){
+if(isset($_POST['text']) && isset($_POST['title'])){
     $theme=$_GET['theme'];
     $title=$_POST['title'];
     $text=$_POST['text'];
     $user=$_SESSION['user'];
-    $date= date('d-M-Y H:m:s');
+    $date= date('Y-m-d H:i:s');
     mysqli_query($con,'INSERT INTO `message`(`message_Title`, `message_Text`, `message_User`, `message_Data`, `theme_ID`) VALUES ("'.$title.'","'.$text.'","'.$user.'","'.$date.'", "'.$theme.'")');
 }
 ?>
